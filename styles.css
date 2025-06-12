@@ -1,0 +1,33 @@
+/* Add CSS styles for your web site here and use them in index.html.
+h2{
+    color:aqua;
+    font-family: monospace;
+}
+*/
+body {
+    background-color:darkgray;
+    color:aliceblue;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+        
+h1{
+    background-color: whitesmoke;
+    color:cadetblue;
+    border-radius: 0 25px;
+    text-align: center;
+}
+
+p{
+    background-color:darkseagreen;
+}
+
+.important{
+    color: cadetblue;
+    background-color: beige;
+} 
+
+#interesting{
+    font-family: monospace;
+    border-radius: 20px;
+    border-color: black;
+}
