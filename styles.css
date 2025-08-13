@@ -1,33 +1,375 @@
-/* Add CSS styles for your web site here and use them in index.html.
-h2{
-    color:aqua;
-    font-family: monospace;
-}
-*/
+/* ===== Base Body Styling ===== */
 body {
-    background-color:darkgray;
-    color:aliceblue;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 100%;
+    background-color: darkgray;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+    color: aliceblue;
+    margin: 0;
+    padding: 0;
+    
 }
-        
-h1{
-    background-color: whitesmoke;
-    color:cadetblue;
-    border-radius: 0 25px;
+
+div{
+    
+}
+
+/* ===== Headings & Paragraphs ===== */
+
+h2{
     text-align: center;
 }
 
-p{
-    background-color:darkseagreen;
+p {
+    background-color: darkseagreen;
+    padding: 10px;
+    border-radius: 20px;
 }
 
-.important{
+/* ===== Links ===== */
+a:link {
+    color: lightblue;
+    text-decoration: none;
+}
+
+a:visited {
+    color: lightgray;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+a:active {
+    color: yellow;
+}
+
+/* ===== Images ===== */
+img {
+    height: 250px; 
+    border: solid bisque 15px; 
+    border-radius: 10px;
+}
+
+/* ===== Lists ===== */
+ol, ul {
+    /* Base list styling (extend as needed) */
+}
+
+ol li, ul li {
+    /* Item-specific styling */
+}
+
+/* ===== Buttons ===== */
+button, .header-button, #theme-button {
+    font-size: 16px;
+    border-radius: 50px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+
+.header-button {
+    background-color: bisque;
+    color: white;
+    border: solid white;
+}
+
+
+/* ===== Custom Classes ===== */
+.important {
     color: cadetblue;
     background-color: beige;
-} 
+}
 
-#interesting{
+#interesting {
     font-family: monospace;
     border-radius: 20px;
     border-color: black;
+}
+
+/* ===== Header Section ===== */
+.header-container {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding: 20px;
+    background-color: #444;
+    height: 450px;
+
+}
+
+.header-item {
+    text-align: center;
+    width: 50%;
+    padding: 10px;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.header-item:nth-of-type(1) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    
+}
+.header-item:nth-of-type(1) h1 {
+    font-size: 2.5rem; /* Big for desktop */
+    margin: 10px 0;
+    
+}
+
+.header-item:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    font-size: 20px;
+    gap: 20px;
+}
+
+/* Welcome message */
+.header-item:nth-of-type(2) h3 {
+    font-size: 1.2rem; /* Smaller than name */
+    font-weight: normal;
+    margin: 5px 0;
+}
+
+#header-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+
+
+#header-img {
+    border-radius: 50%;        
+    object-fit: cover;         /* Crops & zooms */
+}
+
+@media (max-width: 600px) {
+    .header-container {
+        flex-direction: column; /* Stack vertically */
+        align-items: center;
+        padding: 80px ;
+    }
+    
+    .header-item{
+        width: 100%;
+        
+    }
+
+    #header-img{
+        width: 90%;
+        max-width: 250px;
+        min-width: 150px;
+        height: auto;
+        
+    }
+   
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    
+}
+
+.navbar ul {
+    list-style: none;
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(255, 255, 255, 0.4); /* translucent white */
+    backdrop-filter: blur(6px); /* gives a frosted glass effect */
+}
+
+.navbar ul li {
+    float: left;
+    margin: 10px;
+}
+
+.navbar ul li a {
+    font-family: Arial;
+    font-size: 16px;
+    text-decoration: none;
+    color: bisque;
+    display: block;
+    border: solid bisque;
+    border-radius: 15px;
+    padding: 5px 10px;
+    background-color: white;
+}
+
+.navbar ul li a:hover {
+    font-weight: bold;
+}
+
+/* ===== About Section ===== */
+.about{
+    
+    padding: 10px;
+}
+
+/* ===== Data Section ===== */
+.data{
+    
+    background-color: #444;
+    padding: 10px;
+}
+/* ===== project Section ===== */
+
+#cardSect{
+    overflow-x: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+}
+.card {
+    background-color: #444;
+    border: 2px solid bisque;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 15px;
+    min-width: 350px;       /* Fixed width for all cards */
+    min-height: 420px;  /* Makes all cards same height */
+    text-align: center; /* Centers text & image */
+    font-size: 1rem;
+}
+
+
+.card img {
+  max-height: 50%;     /* Image fits card width */
+  width: auto;   /* Controls image height */
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+@media (max-width: 800px) {
+    #cardSect{
+        flex-direction: column; /* Stack vertically */
+        align-items: center;
+        overflow: hidden;
+    }
+    .card{
+        width: 75%;
+    }
+}
+
+
+/* ===== Petition Section ===== */
+.petition-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.petition-para {
+    width: 55%;
+    padding-right: 10px;
+}
+
+.signatures {
+    width: 45%;
+    padding-right: 10px;
+}
+
+/* ===== Inputs and Error States ===== */
+input {
+    display: inline;
+}
+
+.error {
+    border: solid red 2px;
+    background: pink;
+}
+
+/* ===== Dark Mode ===== */
+.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.dark-mode .navbar ul {
+    background-color: rgba(0, 0, 0, 0.4); /* translucent white */
+    backdrop-filter: blur(6px); /* gives a frosted glass effect */
+}
+
+.dark-mode .navbar ul li a {
+    background-color: #1e1e1e;
+}
+
+.dark-mode .header-button {
+    color: black;
+    border: solid black;
+}
+
+/*--- Scroll animation ---*/
+
+.revealable, .start{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+
+.modal {
+    display: none; /* hides the modal from view by default*/
+    position: fixed; /* keeps the modal in one place */
+    z-index: 3; /* positions the modal on top of all other elements on the screen */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0,0,0,0.4); /* 40% opacity black - other elements can still be seen */
+    flex-direction: column; /* these flexbox rules center the content on the screen */
+    align-items: center;
+    justify-content: center;
+    
+}
+/* box that contains all the content and images */
+.modal-content {
+    background-color: lightsteelblue; /* update the colors and font sizes as you like */
+    color: black;
+    text-align: center;
+    font-size: 3rem;
+    display: flex; /* adds flexbox to center all items */
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+#thanks-modal-content {
+    width: 20rem; /* sets a default width for the text container */
+}
+
+#modal-text-container {
+    display: flex; /* adds flexbox to center the text and buttons (stretch feature) */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#modal-img{
+    transition: transform 0.2s ease-in-out;
 }
