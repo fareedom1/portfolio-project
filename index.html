@@ -10,77 +10,135 @@
 </head>
 
 <body>
+    <!-- Navbar  -->
+    <div class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li ><button id="theme-button" class = "header-button">Dark Mode</button></li>
+            <!-- Stretch Challenge: Drop Down -->
+        </ul>
+    </div>
 
     <!--- Headings --->
-    <h1>Fareed Uddin</h1>
-    <h3>Welcome to my Domain</h3>
-    <button type="button">Linkedin</button>
-    <button type="button">Github</button>
-
+    <div class="header-container start">
+        <div class="header-item">
+            <img id="header-img" src="img/pfp.jpg" alt="Site logo">
+            <h1>Fareed Uddin</h1>
+        </div>
+        <div class="header-item">
+            <h2>Welcome to my Domain</h2>
+            <div id="header-buttons">
+                <a href="https://www.linkedin.com/in/fareed-uddin-0a02bb281/"> <button type="button" class="header-button">Linkedin</button></a>
+                <a href="https://github.com/fareedom1"><button type="button" class="header-button">Github</button></a>
+            </div>        
+        </div>
+    </div>
+   
 
     <!--- About --->
-    <h2>About Me</h2>
-    <p> This portfolio gives you a deeper look at my skills, interests, and personality beyond my resume. Whether you’re an employer or a collaborator, I’d love for you
-         to get to know me better.</p> 
+    <div class="about revealable">
+        <h2 id="about">About Me</h2>
+        <p> This portfolio gives you a deeper look at my skills, interests, and personality beyond my resume. Whether you’re an employer or a collaborator, I’d love for you
+            to get to know me better.</p> 
+        <p>I’m a Computer Science student at Florida Atlantic University, set to graduate in January 2027 with a 3.9 GPA. I specialize in building logical, efficient, and user-friendly applications using Python, C++, JavaScript, and React.</p>
+        <p>My experience includes instructing students in fundamental coding at Code Ninjas, where I teach programming concepts to students aged 7–14 using Scratch, JavaScript, and Python. 
+        During my time working at code ninjas, I also collbaroatred with one of the clients to design an educational website. Alongside this, I built personal projects that blend logic, creativity, and technical depth.</p>
+        <p class = "important">This portfolio gives you a closer look at the skills, mindset, and work ethic I bring to the table. Scroll through to see my projects, GitHub, and links to current work. I hope this helps you see who I am — beyond bullet points on a resume.</p>
+    </div>
     
-    <p>I’m a Computer Science student at Florida Atlantic University, set to graduate in January 2027 with a 3.9 GPA. I specialize in building logical, efficient, and user-friendly applications using Python, C++, JavaScript, and React.
-    </p>
-   <p>My experience includes instructing students in fundamental coding at Code Ninjas, where I teach programming concepts to students aged 7–14 using Scratch, JavaScript, and Python. 
-      During my time working at code ninjas, I also collbaroatred with one of the clients to design an educational website. Alongside this, I built personal projects that blend logic, creativity, and technical depth.
-   </p>
-    <p class = "important">This portfolio gives you a closer look at the skills, mindset, and work ethic I bring to the table. Scroll through to see my projects, GitHub, and links to current work. I hope this helps you see who I am — beyond bullet points on a resume.
-    </p>
     
 
     <!--- Data --->
-    <br>
-    <h3>Tech Stack Experience Breakdown</h3>
-    <img src="img/lanuages.png" style="height: 250px;" />
-    <h4>My time and focus across languages and frameworks </h4>
+    <div class="data revealable">
+        <br>
+        <h2>Tech Stack Experience Breakdown</h2>
+        <img src="img/lanuages.png" style="height: 250px;" />
+        <h4>My time and focus across languages and frameworks </h4>
 
-    <ul id="interesting">
-        <li>Python – 45%</li>
-        <li>C++ – 30%</li>
-        <li>JavaScript – 15%</li>
-        <li>React – 10% (growing!)</li>
-    </ul>
-    <!--- Impact --->
-    <h2>What I Work On</h2>
+        <ul id="interesting">
+            <li>Python – 45%</li>
+            <li>C++ – 30%</li>
+            <li>JavaScript – 15%</li>
+            <li>React – 10% (growing!)</li>
+        </ul>
+    </div>
+    
+    <!--- projects --->
+    <div class="projects revealable ">
+        <h2>What I Work On</h2>
+        <div id="cardSect">
+            <div class="card revealable" >
+                <img src="img/blackjack.png" alt="Screenshot of terminal blackjack game" />
+                <h3>Blackjack Game – Python</h3>
+                <p>A self-coded blackjack game that applies object-oriented programming and control logic. It helped me sharpen function design and random generation handling.
+                </p>
+            </div>
+            
+            <div class="card revealable">
+                <img src="img/finlitproj.png" alt="Screenshot of financial literacy website project" />
+                <h3>Web Literacy Site – Freelance Project</h3>
+                <p>A website built for a financial education program. I led the full design and deployment using platforms like Squarespace and Canvas, while also managing client communication and feedback.
+                </p>
+            </div>
 
-    <img src="img/blackjack.png" alt="Screenshot of terminal blackjack game" />
-    <h3>Blackjack Game – Python</h3>
-    <p>A self-coded blackjack game that applies object-oriented programming and control logic. It helped me sharpen function design and random generation handling.
-    </p>
-    <br>
-    <img src="img/finlitproj.png" alt="Screenshot of financial literacy website project" />
-    <h3>Web Literacy Site – Freelance Project</h3>
-    <p>A website built for a financial education program. I led the full design and deployment using platforms like Squarespace and Canvas, while also managing client communication and feedback.
-    </p>
-    <br>
-    <img src="img/kan_vs_cnn.png" alt="Graph comparing CNN vs. KAN models on MNIST addition task" />
-    <h3>AI Research Project – DeepProbLog</h3>
-    <p>I compared two neural network architectures on a symbolic reasoning task. This project deepened my understanding of logic-based machine learning and AI interpretability.
-    </p>
+            <div class="card revealable">
+                <img src="img/CNNvsKAN.png" alt="Graph comparing CNN vs. KAN models on MNIST addition task" />
+                <h3>AI Research Project – DeepProbLog</h3>
+                <p>I compared two neural network architectures on a symbolic reasoning task. This project deepened my understanding of logic-based machine learning and AI interpretability.
+                </p>
+            </div>
+        </div>
+    </div>
 
+    <!--- Petition --->
+    <div class="petition revealable" id="petition">
+        <h2>Leave a Shoutout ✨</h2>
+        <div class="petition-container">
+            <div class="petition-para">
+                <!-- info goes here -->
+                 <p>Drop your name and a short message if you'd like to show support or just say hi!</p>
+            </div>
 
-    <!--- News ---> <!--this will help with a stretch goal, if you do not want to incorporate this, then leave it alone :)-->
-    <h2>Recent News</h2>
+            <div class="signatures">
+                <p>🖊️ Jason said: “Love your work!”</p>
+                <p>🖊️ Lina said: “This site is inspiring!”</p>
+                <p>🖊️ Marco said: “Keep it up 💪”</p>
+            </div>
 
-    <a class=""
-        href="">
-        <article>
-            <h3></h3>
-            <p></p>
-        </article>
-    </a>
+        </div>
 
-    <a class= ""
-    href="https://www.freecodecamp.org/news/learning-to-code-at-any-age/" target="_blank">
-    <article>
-      <h3>Learning to Code at Any Age</h3>
-      <p>Inspiration for those starting their programming journey — because it’s never too late to begin.</p>
-    </article>
-  </a>
+        <!--- Sign Petition Form --->
+        <form id="sign-petition" title="sign-petition">
+            <!-- inputs go here -->
+            <label for = "name">Name:</label>
+            <input id = "name">
+            <label for = "message">Message:</label>
+            <input id = "message">
+        </form>
+
+        <!--- Sign Now Button --->
+        <button id="sign-now-button">Leave a Message</button>
+
+    </div>
+    
+    <!-- Modal -->
+    <div id="thanks-modal" class="modal">
+        
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div id="modal-text-container">
+                <!-- text here -->
+                <p id = "thanks-content-modal">Test</p>
+                <img src="img/thankYou.png" id = "modal-img">
+                <!-- button here (stretch feature) -->
+            </div>
+            <!-- image here-->
+        </div>
+    </div>
+    
+  <script src="index.js"></script>
 </body>
 
 </html>
